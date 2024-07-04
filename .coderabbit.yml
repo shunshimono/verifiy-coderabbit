@@ -1,0 +1,43 @@
+language: 'ja'
+early_access: false
+reviews:
+  profile: 'assertive'
+  path_filters:
+    - '!**/__generated__/**'
+  path_instructions:
+    - path: 'src/**/*.tsx'
+      instructions:
+        'ReactおよびNext.jsを使用したTypeScriptコンポーネントのレビューしてください。以下の点に注意して評価してください。
+        1. コンポーネントの再利用性と保守性。
+        2. 適切なフックの使用とカスタムフックの設計。
+        3. 型の利用によるエラーの予防とデータ構造の明確化。
+        4. アクセシビリティが考慮されているか。
+        5. パフォーマンスの最適化、特にレンダリングと状態管理の効率性。
+        6. 公式のReactベストプラクティスへの準拠状況。
+        7. Apollo Clientを通じた効率的なGraphQLクエリとキャッシュ管理。
+        8. Tailwind CSSを使用したスタイリングが過剰でなく、必要最低限に保たれているか。
+        不具合や改善点があれば、具体的な提案をしてください。'
+    - path: 'src/**/*.ts'
+      instructions: 'TypeScriptファイルをレビューしてください。以下の点に注意して評価してください。
+        1. 型定義の適切性と一貫性。
+        2. モジュールの分割と再利用性。
+        3. 効率的なアルゴリズムとデータ処理。
+        4. エラーハンドリングと例外管理の適切さ。
+        5. Reactのカスタムフックの設計と実装の品質。
+        6. Apollo Clientを通じた効率的なGraphQLクエリとキャッシュ管理。
+        コードの問題点や改善提案を明確に指摘してください。'
+    - path: 'src/**/*.gql'
+      instructions:
+        'GraphQLファイル(.gql)をレビューしてください。以下の点に注意して評価してください。
+        1. クエリとミューテーションに未使用のフィールドがないか。
+        改善点や問題点を指摘し、より効率的なクエリ設計を提案してください。'
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+chat:
+  auto_reply: true
